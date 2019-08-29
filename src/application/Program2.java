@@ -13,36 +13,45 @@ public class Program2 {
 	
 	public static void main(String[] args) {
 
+		try {
 		while(true) {//Começo do while
 			
-			String[] selectOption = { "Cadastrar", "Exibir","Pesquisar","Sair"};
-			String option = (String) JOptionPane.showInputDialog(null, "Menu... ","Selecione a ação desejada: ", JOptionPane.QUESTION_MESSAGE, null, selectOption,selectOption[0]);
+				String[] selectOption = { "Cadastrar", "Exibir","Pesquisar","Sair"};
+				String option = (String) JOptionPane.showInputDialog(null, "Menu... ","Selecione a ação desejada: ", JOptionPane.QUESTION_MESSAGE, null, selectOption,selectOption[0]);
+	
+				switch (option) {
+				case "Cadastrar":
+	
+					cadastrar();//Vai chamar o metodo cadastrar
+	
+					break;
+	
+				case "Exibir":
+					mostrar();//Vai chamar o metodo mostrar
+					break;
+				
+				case "Pesquisar":
+					pesquisar();//Vai chamar o metodo Pesquisar
+					break;
+				case "Sair":
+					System.out.println("Fim");//Vai sair
+	
+				}
+	
+				if (option.equals("Sair")) {
+					break;
+				}
+	
+			} // Fim do while
+		}
+		catch (NumberFormatException e) {
+			System.out.println("Tipo incompativel");//Se tiver algum erro de tipo ele vai retornar esse erro
 
-			switch (option) {
-			case "Cadastrar":
+		} catch (RuntimeException e) {
 
-				cadastrar();//Vai chamar o metodo cadastrar
-
-				break;
-
-			case "Exibir":
-				mostrar();//Vai chamar o metodo mostrar
-				break;
+			System.out.println("Erro inesperado");//Qualquer outro tipo de erro
 			
-			case "Pesquisar":
-				pesquisar();//Vai chamar o metodo Pesquisar
-				break;
-			case "Sair":
-				System.out.println("Fim");//Vai sair
-
-			}
-
-			if (option.equals("Sair")) {
-				break;
-			}
-
-		} // Fim do while
-		
+		}
 		
 		
 	}
