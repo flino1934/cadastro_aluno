@@ -20,6 +20,7 @@ public class Program {
 			
 			String name = JOptionPane.showInputDialog("Digite o nome do aluno");
 			int ra = Integer.parseInt(JOptionPane.showInputDialog("Digite o r.a do aluno"));
+			
 			String[] selectSexo = { "Masculino", "Feminino"};
 			String sexo = (String) JOptionPane.showInputDialog(null, "Sexo... ","Selecione o sexo: ", JOptionPane.QUESTION_MESSAGE, null, selectSexo,selectSexo[0]);
 			
@@ -50,9 +51,9 @@ public class Program {
 		
 		else {
 			
-			System.out.println("Cadastros encontrado!");
+			System.out.println("Cadastro encontrado!");
 			System.out.println();
-			System.out.println(a.toString());//vai mostrar os dados do aluno do r.a digitado
+			System.out.println(a.toString());//vai mostrar os dados do aluno d
 
 		}
 
